@@ -16,7 +16,7 @@ public class VehiculoController {
 	@Autowired
 	private VehiculoService vehiculoService;
 	
-	@GetMapping("/vehiculos")
+	@GetMapping({"/","/vehiculos"})
 	public String viewTipoUsuarioPage (final Model model) {
 		model.addAttribute("listaVehiculos",this.vehiculoService.getAllVehiculos());
 		return VehiculoController.PAGINA_VEHICULOS;
